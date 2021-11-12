@@ -18,7 +18,7 @@ class VisitorInfoServiceProvider extends ServiceProvider
         $router->pushMiddlewareToGroup('web', GetVisitorInfo::class);
 
         $this->publishes([
-            __DIR__ . '/database/migrations' => database_path('migrations'),
+            __DIR__ . '/database/migrations/2021_11_12_124909_create_visitors_table.php' => database_path('migrations/2021_11_12_124909_create_visitors_table.php'),
         ]);
     }
     public function register()
