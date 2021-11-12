@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use App\Models\Visitor;
+use Mezbilisim\VisitorInfo\Http\Models\Visitor;
 
 class GetVisitorInfo
 {
