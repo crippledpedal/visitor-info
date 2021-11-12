@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Mezbilisim\VisitorInfo\Http\Models\Visitor;
+use App\Models\Visitor;
 
 class GetVisitorInfo
 {
@@ -24,7 +24,7 @@ class GetVisitorInfo
         ];
 
         Visitor::create($visitorData);
-        
+
 
         return $next($request);
     }
