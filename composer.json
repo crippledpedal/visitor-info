@@ -1,0 +1,29 @@
+{
+    "name": "mezbilisim/visitor-info",
+    "description": "Laravel send visitor info.",
+    "homepage": "https://www.mezbilisim.com/",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Furkan Aksoy",
+            "email": "furkan@mezbilisim.com",
+            "homepage": "https://www.mezbilisim.com/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Mezbilisim\\VisitorInfo\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mezbilisim\\VisitorInfo\\VisitorInfoServiceProvider"
+            ]
+        }
+    }
+}
