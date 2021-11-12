@@ -16,6 +16,10 @@ class VisitorInfoServiceProvider extends ServiceProvider
 
         $router = $this->app->make(Router::class);
         $router->pushMiddlewareToGroup('web', GetVisitorInfo::class);
+
+        $this->publishes([
+            __DIR__ . '/database/migrations' => database_path('migrations'),
+        ]);
     }
     public function register()
     {
