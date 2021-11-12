@@ -15,6 +15,10 @@
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
+        "classmap": [
+            "src/migrations",
+            "src/Models"
+        ],
         "psr-4": {
             "Mezbilisim\\VisitorInfo\\": "src/"
         }
