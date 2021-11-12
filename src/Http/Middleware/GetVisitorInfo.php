@@ -19,7 +19,7 @@ class GetVisitorInfo
             'ip'      => $request->ipinfo->ip ?? null,
             'country' => $request->ipinfo->county_name ?? null,
             'city'    => 'deneme',
-            'url'     => $explodePath,
+            'url'     => $explodePath[0],
         ];
 
         Visitor::create($visitorData);
