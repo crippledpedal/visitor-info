@@ -19,7 +19,8 @@ class VisitorInfoServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/database/migrations/2021_11_12_124909_create_visitors_table.php' => database_path('migrations/2021_11_12_124909_create_visitors_table.php'),
-            __DIR__ . '/resources/assets' => public_path('visitor-info')
+            __DIR__ . '/resources/assets' => public_path('visitor-info'),
+            __DIR__ . '/Exports/VisitorsExport.php' => app_path('Exports/VisitorsExport.php'),
         ]);
     }
     public function register()
