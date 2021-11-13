@@ -62,7 +62,7 @@
                                         <div class="row">
                                             <div class="form-group col-lg-12">
                                                 <label class="form-label mb-1 text-2">Access Key</label>
-                                                <input type="text" value="deneme" class="form-control text-3 h-auto" name="access-key">
+                                                <input type="text" value="" class="form-control text-3 h-auto" name="access-key">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -124,14 +124,14 @@
                                                                value="csv"> CSV
                                                     </label>
                                                 </div>
-                                                <div class="form-check form-check-inline">
+                                                {{--<div class="form-check form-check-inline">
                                                     <label class="form-check-label">
                                                         <input class="form-check-input"
                                                                type="radio"
                                                                name="format"
                                                                value="pdf"> PDF
                                                     </label>
-                                                </div>
+                                                </div>--}}
                                             </div>
                                         </div>
                                         <div class="row mt-3">

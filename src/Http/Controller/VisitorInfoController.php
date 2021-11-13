@@ -51,11 +51,11 @@ class VisitorInfoController extends Controller
                     return false;
                 }
 
-                if ($input == 'visitorType' && !in_array($inputs['visitorType'], ['all', 'onlyCopied'])) {
+                if ($input == 'visitorType' && !in_array($inputs['visitorType'], ['all'])) {
                     return false;
                 }
 
-                if ($input == 'format' && !in_array($inputs['format'], ['xlsx', 'csv', 'pdf'])) {
+                if ($input == 'format' && !in_array($inputs['format'], ['xlsx', 'csv'])) {
                     return false;
                 }
             } else {
