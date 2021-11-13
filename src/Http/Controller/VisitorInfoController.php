@@ -11,4 +11,9 @@ class VisitorInfoController extends Controller
     {
         return view('visitor-info::visitors');
     }
+
+    public function download()
+    {
+        
+    }
 }
