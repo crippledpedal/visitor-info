@@ -58,21 +58,21 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    <form class="contact-form form-style-2" action="php/contact-form.php" method="POST">
+                                    <form class="form-style-2" action="{{ route('visitors') }}" method="POST">
                                         <div class="row">
                                             <div class="form-group col-lg-12">
                                                 <label class="form-label mb-1 text-2">Access Key</label>
-                                                <input type="text" value="" class="form-control text-3 h-auto" name="access-key" required>
+                                                <input type="text" value="deneme" class="form-control text-3 h-auto" name="access-key">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-6">
                                                 <label class="form-label mb-1 text-2">Başlangıç Tarihi</label>
-                                                <input type="date" value="" class="form-control text-3 h-auto" name="start-date" id="start-date" required>
+                                                <input type="date" value="" class="form-control text-3 h-auto" name="start-date" id="start-date">
                                             </div>
                                             <div class="form-group col-6">
                                                 <label class="form-label mb-1 text-2">Bitiş Tarihi</label>
-                                                <input type="date" value="" class="form-control text-3 h-auto" name="end-date" id="end-date" required>
+                                                <input type="date" value="" class="form-control text-3 h-auto" name="end-date" id="end-date">
                                             </div>
                                             {{--<div class="form-group col-12">
                                                 <a href="javascript:void(0)" onclick="setDate('thisMonth')" class="text-decoration-underline mr-2">Bu Ay</a>
@@ -90,8 +90,7 @@
                                                         <input class="form-check-input"
                                                                type="radio"
                                                                name="visitorType"
-                                                               value="all"
-                                                               required> Tüm Ziyaretçiler
+                                                               value="all"> Tüm Ziyaretçiler
                                                     </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
@@ -100,7 +99,7 @@
                                                                type="radio"
                                                                name="visitorType"
                                                                value="onlyCopied"
-                                                               required> Sadece Kopya Olanlar
+                                                               checked> Sadece Kopya Olanlar
                                                     </label>
                                                 </div>
                                             </div>
@@ -114,7 +113,7 @@
                                                                type="radio"
                                                                name="format"
                                                                value="xlsx"
-                                                               required> XLSX
+                                                               checked> XLSX
                                                     </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
@@ -122,8 +121,7 @@
                                                         <input class="form-check-input"
                                                                type="radio"
                                                                name="format"
-                                                               value="csv"
-                                                               required> CSV
+                                                               value="csv"> CSV
                                                     </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
@@ -131,8 +129,7 @@
                                                         <input class="form-check-input"
                                                                type="radio"
                                                                name="format"
-                                                               value="pdf"
-                                                               required> PDF
+                                                               value="pdf"> PDF
                                                     </label>
                                                 </div>
                                             </div>

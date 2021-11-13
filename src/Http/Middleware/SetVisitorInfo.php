@@ -4,7 +4,7 @@ namespace Mezbilisim\VisitorInfo\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use App\Models\Visitor;
+use Mezbilisim\VisitorInfo\Models\Visitor;
 
 
 class SetVisitorInfo
