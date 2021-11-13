@@ -14,6 +14,6 @@ class VisitorInfoController extends Controller
 
     public function download()
     {
-        
+
     }
 }
