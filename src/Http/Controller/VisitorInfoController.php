@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 
 class VisitorInfoController extends Controller
 {
-    public $data;
-
-    public function __construct(Request $request)
+    public function index()
     {
-
+        return view('visitor-info::visitors');
     }
 }

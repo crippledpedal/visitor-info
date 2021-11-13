@@ -19,6 +19,7 @@ class CreateVisitorsTable extends Migration
             $table->string('country')->nullable();
             $table->string('city')->nullable();
             $table->string('url')->nullable();
+            $table->string('referer')->nullable();
             $table->timestamps();
         });
     }

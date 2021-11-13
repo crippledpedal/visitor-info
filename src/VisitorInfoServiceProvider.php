@@ -4,7 +4,7 @@ namespace Mezbilisim\VisitorInfo;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use Mezbilisim\VisitorInfo\Http\Middleware\GetVisitorInfo;
+use Mezbilisim\VisitorInfo\Http\Middleware\SetVisitorInfo;
 
 class VisitorInfoServiceProvider extends ServiceProvider
 {
@@ -15,11 +15,12 @@ class VisitorInfoServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 
         $router = $this->app->make(Router::class);
-        $router->pushMiddlewareToGroup('web', GetVisitorInfo::class);
+        $router->pushMiddlewareToGroup('web', SetVisitorInfo::class);
 
         $this->publishes([
             __DIR__ . '/database/migrations/2021_11_12_124909_create_visitors_table.php' => database_path('migrations/2021_11_12_124909_create_visitors_table.php'),
             __DIR__ . '/Models/Visitor.php' => app_path('Models/Visitor.php'),
+            __DIR__ . '/resources/assets' => public_path('visitor-info')
         ]);
     }
     public function register()

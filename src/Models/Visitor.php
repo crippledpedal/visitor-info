@@ -10,6 +10,6 @@ class Visitor extends Model
     use HasFactory;
 
     protected $fillable = [
-        'ip', 'country', 'city', 'url'
+        'ip', 'country', 'city', 'url', 'referer'
     ];
 }
