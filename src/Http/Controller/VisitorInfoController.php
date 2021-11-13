@@ -5,6 +5,9 @@ namespace Mezbilisim\VisitorInfo\Http\Controller;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use Mezbilisim\VisitorInfo\Exports\VisitorsExport;
+use Mezbilisim\VisitorInfo\Models\Visitor;
 
 class VisitorInfoController extends Controller
 {
@@ -19,8 +22,15 @@ class VisitorInfoController extends Controller
     {
         if ($this->checkAcceessKey($request->input('access-key'))) {
             if ($this->checkInputsValidate($request->all())) {
-                $visitors = '';
-                dd('in if');
+                $visitors = Visitor::whereBetween('created_at', [Carbon::make($request->input('start-date'))->startOfDay(), Carbon::make($request->input('end-date'))->endOfDay()])
+                    ->select('ip', 'country', 'city', 'url', 'referer', 'created_at')
+                    ->get();
+
+                if ($request->input('visitorType') == 'onlyCopied') {
+                    #$visitors = $this->selectOnlyCopiedVisitors($visitors);
+                }
+
+                return Excel::download(new VisitorsExport($visitors), env('APP_URL') . '-visitors.xlsx');
             }
         }
         return back();
@@ -52,5 +62,12 @@ class VisitorInfoController extends Controller
             }
         }
         return true;
+    }
+
+    private function selectOnlyCopiedVisitors($visitors) {
+        $unique = $visitors->unique('ip');
+        $copied = $visitors->diff($unique);
+        $grouped = $copied->groupBy('ip');
+        return $grouped;
     }
 }
