@@ -5,6 +5,7 @@ namespace Mezbilisim\VisitorInfo\Http\Controller;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Maatwebsite\Excel\Facades\Excel;
 use Mezbilisim\VisitorInfo\Exports\VisitorsExport;
 use Mezbilisim\VisitorInfo\Models\Visitor;
@@ -30,14 +31,14 @@ class VisitorInfoController extends Controller
                     #$visitors = $this->selectOnlyCopiedVisitors($visitors);
                 }
 
-                return Excel::download(new VisitorsExport($visitors), env('APP_URL') . '-visitors.xlsx');
+                return Excel::download(new VisitorsExport($visitors), ('visitors-' . Str::slug(env('APP_URL')). '.' . $request->input('format')));
             }
         }
         return back();
     }
 
     private function checkAcceessKey($key) {
-        if ($key == 'deneme') {
+        if ($key == config('visitor.access-key')) {
             return true;
         }
         return false;

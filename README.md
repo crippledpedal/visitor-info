@@ -13,3 +13,6 @@ Daha sonra kurulum için aşağıdaki adımları izleyin.
 1) composer require mezbilisim/visitor-info
 2) php artisan vendor:publish --provider="Mezbilisim\VisitorInfo\VisitorInfoServiceProvider"
 3) php artisan migrate
+4) php artisan optimize:clear
+
+config/visitor.php içindeki 'access-key' değerini doldurun. Bu değer formdaki doğrulama değeridir. 

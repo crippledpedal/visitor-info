@@ -90,18 +90,18 @@
                                                         <input class="form-check-input"
                                                                type="radio"
                                                                name="visitorType"
-                                                               value="all"> Tüm Ziyaretçiler
+                                                               value="all"
+                                                               checked> Tüm Ziyaretçiler
                                                     </label>
                                                 </div>
-                                                <div class="form-check form-check-inline">
+                                                {{--<div class="form-check form-check-inline">
                                                     <label class="form-check-label">
                                                         <input class="form-check-input"
                                                                type="radio"
                                                                name="visitorType"
-                                                               value="onlyCopied"
-                                                               checked> Sadece Kopya Olanlar
+                                                               value="onlyCopied"> Sadece Kopya Olanlar
                                                     </label>
-                                                </div>
+                                                </div>--}}
                                             </div>
                                         </div>
                                         <div class="row">
