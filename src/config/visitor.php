@@ -1,4 +1,4 @@
 <?php
  return [
-     'access-key' => 'yonetim',
+     'access-key' => '',
  ];
