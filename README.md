@@ -5,8 +5,8 @@ Laravel projesine giriş yapan kullanıcıların ip bilgilerinin kaydedildiği p
 ## Kurulum
 
 Kuruluma başlamadan önce aşağıdaki paketlerin kurulması gerekiyor: 
-1) ipinfo: https://github.com/ipinfo/laravel
-2) laravel-excel: https://docs.laravel-excel.com/3.1/getting-started/installation.html
+1) geoip: https://github.com/Torann/laravel-geoip
+2) (OPTIONAL) laravel-excel: https://docs.laravel-excel.com/3.1/getting-started/installation.html
 
 
 Daha sonra kurulum için aşağıdaki adımları izleyin.
